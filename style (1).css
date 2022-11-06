@@ -1,0 +1,334 @@
+* {
+	padding: 0;
+    margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	
+}
+
+header {
+	width: auto;
+	padding: 10px;
+	text-align: center;
+}
+
+
+
+nav ul {
+	list-style: none;
+	background-color: #ffc7c7;
+	overflow: hidden;
+}
+
+
+
+.img-logo{
+	height: 8vh;
+	margin: 10px 0px 0px 0px;
+}
+
+nav ul {
+	text-align: center;
+}
+
+
+nav ul li{
+
+	display: inline-block;
+	padding: 20px;
+}
+
+nav ul li:hover{
+	background-color: #ffffff;
+	
+}
+
+.hide{
+	font-size: 22px;
+	padding: 16px;
+	background-color: #f0f0f0;
+	display: none;
+	cursor: pointer;
+}
+
+ul li {
+  display: inline-block;
+  padding: 20px;
+  transition: all ease-in-out 250ms;
+}
+
+ul li a {
+
+	font-size: 2rem;
+	color: #2d292a;
+	text-decoration: none;
+}
+
+a:hover{ 
+	color: #ff4c79;
+
+}
+
+.container {
+  display: grid; 
+  grid-template-columns: 2fr 0.5fr; 
+  grid-template-rows: 1fr; 
+  gap: 0px 3px; 
+  grid-template-areas: 
+    "cont cont2"; 
+}
+
+.cont {
+	font-size: 20px;
+	grid-area: cont;
+	background-color: #6ebfb5;
+
+}
+
+.cont2 {
+	font-size: 20px;
+	grid-area: cont2;
+	background-color: #24a19c;
+}
+
+footer {
+	text-align: center;
+	font-size: 20px;
+	background-color: #ffc7c7;
+}
+
+section{
+	padding: 20px;
+}
+
+@media (max-width: 800px){
+
+	header {
+		width: 100%;
+	}
+
+	nav {
+    width: max-content;
+	}
+
+	ul li {
+		border-bottom: 1px solid;
+		border-color: #fff;
+		width: 100%;
+		padding: 16px;
+		text-align: left;
+	}
+
+	.hide {
+		color: #ff4c79;
+		text-align: center;
+		width: 100%;
+    display: block;
+  	}
+
+  	nav ul {
+ 	 display: none;
+	}
+
+  	.grid-container{
+	grid-template-columns: 200px auto;
+	grid-template-rows: 100px 50px auto 100px;
+	column-gap: 1rem;
+	background-color: red;
+	row-gap: 1rem;
+	grid-template:
+	"contenido"
+	"publicidad";
+	}
+
+	.gallery{
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-areas: 
+		"zona1 zona2"
+		"zona3 zona4"
+		"zona5 zona6";
+	}
+
+	.gallery_picture::before{
+		font-size: 1rem;
+	}
+
+}
+
+.gallery{
+	padding-bottom: 3em;
+	padding-top: 1em;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-auto-rows: 250px;
+	grid-template-areas: 
+	"zona1 zona2 zona3"
+	"zona4 zona5 zona6 ";
+	gap: .8em;
+
+}
+
+.gallery_picture-g1{
+	grid-area: zona1;
+}
+
+.gallery_picture-g2{
+	grid-area: zona2;
+}
+
+.gallery_picture-g3{
+	grid-area: zona3;
+}
+
+.gallery_picture-g4{
+	grid-area: zona4;
+}
+
+.gallery_picture-g5{
+	grid-area: zona5;
+}
+
+.gallery_picture-g6{
+	grid-area: zona6;
+}
+
+.gallery_img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.gallery_picture{
+	position: relative;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.gallery_picture-g1::before{
+	content: "Body Up";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #24a19d99;
+	transform: scale(0);
+	transition: transform .4s;
+	color: #fff;
+	display: flex; 
+	align-items: center; 
+	justify-content: center;
+	font-size: 2.5rem;
+}
+
+.gallery_picture-g1:hover::before{
+	transform: scale(1) rotate(360deg);
+}
+
+.gallery_picture-g2::before{
+	content: "Vendas Frías";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #ffc7c785;
+	transform: scale(0);
+	transition: transform .4s;
+	color: #fff;
+	display: flex; 
+	align-items: center; 
+	justify-content: center;
+	font-size: 2.5rem;
+}
+
+.gallery_picture-g2:hover::before{
+	transform: scale(1) rotate(360deg);
+}
+
+.gallery_picture-g3::before{
+	content: "Criolipólisis";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #ff4c797e;
+	transform: scale(0);
+	transition: transform .4s;
+	color: #fff;
+	display: flex; 
+	align-items: center; 
+	justify-content: center;
+	font-size: 2.5rem;
+}
+
+.gallery_picture-g3:hover::before{
+	transform: scale(1) rotate(360deg);
+}
+
+.gallery_picture-g4::before{
+	content: "Bronceado";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #ff4c797e;
+	transform: scale(0);
+	transition: transform .4s;
+	color: #fff;
+	display: flex; 
+	align-items: center; 
+	justify-content: center;
+	font-size: 2.5rem;
+}
+
+.gallery_picture-g4:hover::before{
+	transform: scale(1) rotate(360deg);
+}
+
+.gallery_picture-g5::before{
+	content: "Limpieza facial";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #24a19d99;
+	transform: scale(0);
+	transition: transform .4s;
+	color: #fff;
+	display: flex; 
+	align-items: center; 
+	justify-content: center;
+	font-size: 2.5rem;
+}
+
+.gallery_picture-g5:hover::before{
+	transform: scale(1) rotate(360deg);
+}
+
+.gallery_picture-g6::before{
+	content: "Uñas";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #ffc7c785;
+	transform: scale(0);
+	transition: transform .4s;
+	color: #fff;
+	display: flex; 
+	align-items: center; 
+	justify-content: center;
+	font-size: 2.5rem;
+}
+
+.gallery_picture-g6:hover::before{
+	transform: scale(1) rotate(360deg);
+}
